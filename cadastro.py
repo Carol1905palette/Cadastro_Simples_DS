@@ -13,3 +13,11 @@ while True:
         print("==========================")
         print("=====Tela de Cadastro=====")
         print("==========================")
+
+    elif("opcao == 2 ") : 
+        print("=======================")
+        print("=====Tela de Login=====")
+        print("=======================")
+
+        else:
+            break
