@@ -7,6 +7,9 @@ mksenha = ""
 login_usuário = ""
 login_senha = ""
 
+#Variaveis de controle
+controle_cadastro = ""
+
  #Apenas tela de Visualizacao
 while True:
     print("===================")
@@ -22,14 +25,21 @@ while True:
         #Se o usuario digitar o valor 1, vai ser exibido
         # a ação 
     if (opcao == "1" ) :
-        print("==========================")
-        print("=====Tela de Cadastro=====")
-        print("==========================")
-        nome =input("Digite o seu nome: ")
-        idade =input("Digite a sua idade:")
-        usuario =input("Digite seu usuário: ")
-        senha =input("Digite sua senha: ")
-        print("\n Cadastro realizado!\n")
+           while controle_cadastro != "1" :
+            print("==========================")
+            print("=====Tela de Cadastro=====")
+            print("==========================")
+            nome =input("Digite o seu nome: ")
+            idade =input("Digite a sua idade:")
+            usuario =input("Digite seu usuário: ")
+            senha =input("Digite sua senha: ")
+
+            catrole_cadrasro = input("\nVocê deseja voltar para a tela anterior ?\n 1)- Voltar para o menu anterior;\n Digite qualquer tecla para refazer o cadastro;\n ")
+
+            if(controle_cadastro =="1"):
+                 print("\n Cadastro realizado!\n")
+            else:
+                print("Valor diditado inválido, faça o cadastro novamente")
      #se digitar 2, abre a tela de login
     elif(opcao == "2") : 
         print("=======================")
@@ -39,7 +49,7 @@ while True:
         login_senha = input("Digite a senha: ")
 
              #Processamento de usuário e senha 
-        if login_usuário == usuario and login_senha == senha :
+        if login_usuario == usuario and login_senha == senha :
             while True:
                 print("\nLogin realizado com sucesso!\n")
                 print("Bem vindo,", nome )
