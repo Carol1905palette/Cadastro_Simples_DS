@@ -1,3 +1,13 @@
+    #Variaveis para cadastro
+nome = ""
+idade = "" 
+mksenha = ""
+
+ #Variaveis de login
+login_usuário = ""
+login_senha = ""
+
+ #Apenas tela de Visualizacao
 while True:
     print("===================")
     print("Sistema de Cadastro")
@@ -8,23 +18,57 @@ while True:
     print("3 - Sair")
 
     opcao = input("Escolha uma opcão: ")
-    #Funcionalidades
-    #Se o usuario digitar o valor 1, vai ser exibido
-    # a ação 
-    if (opcao == 1 ) :
+        #Funcionalidades
+        #Se o usuario digitar o valor 1, vai ser exibido
+        # a ação 
+    if (opcao == "1" ) :
         print("==========================")
         print("=====Tela de Cadastro=====")
         print("==========================")
-    #se digitar 2, abre a tela de login
-    elif("opcao == 2 ") : 
+        nome =input("Digite o seu nome: ")
+        idade =input("Digite a sua idade:")
+        usuario =input("Digite seu usuário: ")
+        senha =input("Digite sua senha: ")
+        print("\n Cadastro realizado!\n")
+     #se digitar 2, abre a tela de login
+    elif(opcao == "2") : 
         print("=======================")
         print("=====Tela de Login=====")
         print("=======================")
-    #Se digitar 3, sai da execução
-    elif(opcao == 3):
-        print("Voc está saindo do cadastro, até mais!")
+        login_usuário = input(" Digite o usuário cadastrado: ")
+        login_senha = input("Digite a senha: ")
+
+             #Processamento de usuário e senha 
+        if login_usuário == usuario and login_senha == senha :
+            while True:
+                print("\nLogin realizado com sucesso!\n")
+                print("Bem vindo,", nome )
+                print("\n=====Area de Usuário=====\n")
+                print("1 - Ver os dados cadastrados")
+                print("2- Voltar para o meu anterior")
+
+                usuário_opcao = input("\nEscolha uma das opções do menu acima: ")
+
+                if (usuário_opcao == "1"):
+                    print("\n=======================")
+                    print("====Dados Cadastrados====")
+                    print("=======================\n")
+                    #Mostrar dados do usuário:
+                    print("Nome de usuário: ", nome)
+                    print("Idade do usuário: ", idade)
+                    print("Senha do usuário: ", senha)
+                    print("Nome de cadastro: ", usuario)
+                elif(usuário_opcao == "2"):
+                    print("\n Você está voltando para o menu anterior!")
+            #Se não tiver correto entra no caso abaixo
+        else:
+            print("\nUsuário  ou senha incorretos\n")
+         #Se digitar 3, sai da execução 
+    elif (opcao == "3"):
+        print("Você está saindo do cadastro, até mais!")
         break
     #Se não for nem 1,2 ou 3 mostrar erro e repetir código 
     else:
         print("Valor digitado, inválido, use apenas números inteiros do menu")
-    
+         
+            
